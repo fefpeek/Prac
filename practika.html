@@ -1,18 +1,19 @@
+<!-- schedule.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Поддержка первокурсников</title>
+  <title>Вводные мероприятия</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Сайт поддержки первокурсников</h1>
+    <h1>Расписание вводных мероприятий</h1>
     <nav>
       <ul>
         <li><a href="index.html">Главная</a></li>
         <li><a href="instructions.html">Инструкции</a></li>
-        <li><a href="schedule.html">Мероприятия</a></li>
+        <li><a href="schedule.html" class="active">Мероприятия</a></li>
         <li><a href="map.html">Карта</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="popular.html">Популярное</a></li>
@@ -21,31 +22,37 @@
   </header>
 
   <main>
-    <section>
-      <h2>Добро пожаловать, первокурсник!</h2>
-      <p>Здесь ты найдешь всю информацию, которая поможет тебе адаптироваться и не потеряться в первые недели.</p>
-    </section>
-
-    <section>
-      <h3>Поиск по сайту</h3>
-      <input type="text" id="searchInput" placeholder="Найти статью или вопрос...">
-      <button onclick="search()">Искать</button>
-      <div id="searchResults"></div>
-    </section>
-
-    <section>
-      <h3>Предложить свой вопрос</h3>
-      <form id="questionForm">
-        <input type="text" id="userQuestion" placeholder="Ваш вопрос" required>
-        <button type="submit">Отправить</button>
-      </form>
-    </section>
+    <h2>Ближайшие события</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Дата</th>
+          <th>Мероприятие</th>
+          <th>Место</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>19 августа</td>
+          <td>Знакомство с кураторами</td>
+          <td>Аудитория 101</td>
+        </tr>
+        <tr>
+          <td>20 августа</td>
+          <td>Экскурсия по кампусу</td>
+          <td>Центральный вход</td>
+        </tr>
+        <tr>
+          <td>21 августа</td>
+          <td>Лекция: Как устроен университет</td>
+          <td>Актовый зал</td>
+        </tr>
+      </tbody>
+    </table>
   </main>
 
   <footer>
     <p>&copy; 2025 Университет. Поддержка первокурсников.</p>
   </footer>
-
-  <script src="scripts.js"></script>
 </body>
 </html>
