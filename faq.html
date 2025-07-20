@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Часто задаваемые вопросы</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>FAQ — Часто задаваемые вопросы</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="instructions.html">Инструкции</a></li>
+        <li><a href="schedule.html">Мероприятия</a></li>
+        <li><a href="map.html">Карта</a></li>
+        
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Ответы на частые вопросы</h2>
+      <ul>
+        <li><strong>Где получить студенческий билет?</strong> — В деканате вашего факультета в первые дни обучения.</li>
+        <li><strong>Как подключиться к Wi-Fi?</strong> — Используйте логин и пароль из личного кабинета студента.</li>
+        <li><strong>Где находится библиотека?</strong> — В корпусе B, 2-й этаж.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Комментарии</h3>
+      <div id="comments">
+        <!-- Комментарии будут добавлены скриптом -->
+      </div>
+      <form id="commentForm">
+        <input type="text" id="commentInput" placeholder="Оставьте комментарий..." required>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Университет. Поддержка первокурсников.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('commentForm');
+    const comments = document.getElementById('comments');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const input = document.getElementById('commentInput');
+      const text = input.value.trim();
+      if (text !== '') {
+        const p = document.createElement('p');
+        p.textContent = text;
+        comments.appendChild(p);
+        input.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
